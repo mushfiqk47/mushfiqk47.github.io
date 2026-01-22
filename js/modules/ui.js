@@ -40,6 +40,7 @@ const initMobileMenu = () => {
         mobileBtn.setAttribute('aria-expanded', expanded);
         mobileBtn.classList.toggle('active', isActive);
         mobileOverlay.classList.toggle('active', isActive);
+        document.body.classList.toggle('menu-open', isActive);
         document.body.style.overflow = isActive ? 'hidden' : '';
     };
 
