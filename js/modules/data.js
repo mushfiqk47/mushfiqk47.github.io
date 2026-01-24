@@ -19,7 +19,7 @@ export const projectsData = [
         solution: 'We developed a "Quiet Mode" interface that uses generative AI to summarize market sentiment. The UI adapts to market volatility, becoming more alert (red/high contrast) during crashes and calmer (blue/low contrast) during stable periods.',
         stack: ['React', 'D3.js', 'Python', 'Figma'],
         results: ['30% reduction in trade execution time', 'User error rate dropped by 15%', 'Adopted by 3 major hedge funds'],
-        detailImage: 'assets/img/projects/1.jpg'
+        detailImage: 'assets/img/projects/1.WebP'
     },
     {
         id: 'project-2',
@@ -37,7 +37,7 @@ export const projectsData = [
         solution: 'We utilized haptic feedback and 3D fluid simulations to create a "digital clay" interface. Users can pinch, pull, and smooth waveforms directly, making sound design feel physical.',
         stack: ['SwiftUI', 'AudioKit', 'Metal', 'Blender'],
         results: ['Featured in "App Store Editor\'s Choice"', '50k+ downloads in first month', 'Average session time increased by 40%'],
-        detailImage: 'assets/img/projects/2.jpg'
+        detailImage: 'assets/img/projects/2.WebP'
     },
     {
         id: 'project-3',
@@ -55,7 +55,7 @@ export const projectsData = [
         solution: 'We built an "Anti-Interface". The UI fades away when the user starts typing or designing. It only reappears when summoned. A "Focus Tunnel" visual effect helps users visually lock into their task.',
         stack: ['Vue.js', 'Electron', 'Firebase', 'Framer'],
         results: ['Users reported 2x longer deep work sessions', 'Lowest churn rate in category (2%)', 'Viral growth in the writer community'],
-        detailImage: 'assets/img/projects/3.jpg'
+        detailImage: 'assets/img/projects/3.WebP'
     },
     {
         id: 'project-4',
@@ -73,6 +73,6 @@ export const projectsData = [
         solution: 'We replaced the traditional grid with a "editorial walk" layout. Product details unfold like a story. The checkout process is designed as a conversation, not a form filling exercise.',
         stack: ['Next.js', 'Shopify Headless', 'WebGL', 'Tailwind'],
         results: ['Conversion rate for high-ticket items up 25%', 'Return rate dropped by 10%', 'Brand sentiment score reached all-time high'],
-        detailImage: 'assets/img/projects/4.jpg'
+        detailImage: 'assets/img/projects/4.WebP'
     }
 ];
