@@ -281,8 +281,8 @@ section {
     width: 100%;
     z-index: 2000;
     background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
     display: flex;
     justify-content: space-between;
@@ -294,8 +294,8 @@ section {
 
 body.menu-open #main-nav {
     background: transparent;
-    backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     border-bottom-color: transparent;
 }
 
@@ -355,8 +355,8 @@ body.menu-open #main-nav {
     font-size: 1.25rem;
     letter-spacing: 0.2em;
     background: linear-gradient(90deg, var(--felt-base) 0%, var(--solar-amber) 100%);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
 }
@@ -1453,4 +1453,58 @@ body.menu-open #main-nav {
 
 .page-section.active {
     display: block;
+}
+
+/* --- UTILITIES --- */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+.opacity-90 { opacity: 0.9; }
+.opacity-80 { opacity: 0.8; }
+.opacity-60 { opacity: 0.6; }
+
+.mt-0 { margin-top: 0; }
+.mt-5 { margin-top: 5px; }
+.mt-1rem { margin-top: 1rem; }
+.mt-1-5rem { margin-top: 1.5rem; }
+.mt-2rem { margin-top: 2rem; }
+
+.mb-0-5rem { margin-bottom: 0.5rem; }
+.mb-1-5rem { margin-bottom: 1.5rem; }
+.mb-2rem { margin-bottom: 2rem; }
+.mb-4rem { margin-bottom: 4rem; }
+.mb-6rem { margin-bottom: 6rem; }
+
+.fs-0-8rem { font-size: 0.8rem; }
+.fs-1-1rem { font-size: 1.1rem; }
+.fs-1-2rem { font-size: 1.2rem; }
+.fs-2rem { font-size: 2rem; }
+.fs-clamp-projects { font-size: clamp(2.5rem, 5vw, 4rem); }
+
+.max-w-500 { max-width: 500px; }
+.max-w-600 { max-width: 600px; }
+
+.color-solar-flare { color: var(--solar-flare); }
+.border-thin-white { border-color: rgba(255,255,255,0.2); }
+
+.flex-col-gap-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.btn-custom-padding {
+    padding: 1rem 2rem;
+}
+
+.flex-wrap-gap-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }

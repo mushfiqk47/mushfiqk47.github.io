@@ -61,7 +61,9 @@ export const initRouter = () => {
                     } else if (!isNew) {
                         target.scrollIntoView({ behavior: 'smooth' });
                     } else {
-                        setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 50);
+                        setTimeout(() => {
+                            target.scrollIntoView({ behavior: 'instant' });
+                        }, 50);
                     }
                 }
             }
