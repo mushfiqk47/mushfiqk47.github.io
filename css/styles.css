@@ -344,16 +344,27 @@ body.menu-open #main-nav {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo span {
     font-weight: 700;
     font-size: 1.25rem;
-    color: var(--felt-base);
-    text-decoration: none;
     letter-spacing: 0.2em;
     background: linear-gradient(90deg, var(--felt-base) 0%, var(--solar-amber) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
+}
+
+.logo-icon {
+    height: 32px;
+    width: auto;
+    display: block;
 }
 
 /* Mobile Menu */
