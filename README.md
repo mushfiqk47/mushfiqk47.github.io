@@ -15,7 +15,7 @@ A premium, multidisciplinary portfolio website for **Md. Mushfiq Kabir**, a Grap
 - **Performance Optimized:** Native feel with optimized image loading and minimal external dependencies.
 - **Responsive Design:** Fully fluid layouts catering to mobile, tablet, and desktop experiences.
 
-## 🛠️ Tech Stack
+## 🛠️ SKILL STACK
 - **Languages:** HTML5, CSS3, JavaScript (ES6+ Modules)
 - **Icons:** [Lucide Icons](https://lucide.dev/)
 - **Typography:** Space Grotesk & Space Mono (Google Fonts)

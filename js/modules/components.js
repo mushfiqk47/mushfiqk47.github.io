@@ -56,13 +56,14 @@ export const renderDetailView = (projectId) => {
                         <dt class="meta-label">DELIVERABLES</dt> <dd>${project.deliverables}</dd>
                     </dl>
                     <div class="tech-stack-section">
-                        <span class="meta-label">TECH STACK</span>
+                        <span class="meta-label">SKILL STACK</span>
                         <div class="skills-tag-cloud">
                             ${project.stack.map(t => `<span class="skill-tag">${t}</span>`).join('')}
                         </div>
                     </div>
                     <div class="cta-wrapper">
-                        <a href="#contact" class="btn-live">Work with me</a>
+                        <a href="${project.liveLink}" target="_blank" rel="noopener" class="btn-live">Live Link  ↗</a>
+                        <a href="#contact" class="btn-live btn-secondary">Work with me</a>
                     </div>
                 </aside>
                 <article>

@@ -1,78 +1,112 @@
 /**
  * Project Data Registry
  * Centralized source of truth for portfolio content.
+ * 
+ * Fields:
+ * - isFeatured: boolean - Show this project on the home page featured section
+ * - position: number - Display order (1 = first, 2 = second, etc.)
  */
 export const projectsData = [
     {
         id: 'project-1',
-        title: 'Neural Interface',
-        tags: 'AI / DASHBOARD',
-        shortDescription: 'AI-driven sentiment analysis for high-frequency trading environments.',
+        title: 'Flux',
+        tags: 'HEALTH / DASHBOARD',
+        isFeatured: true,
+        position: 1,
+        shortDescription: 'A dark-themed health tracking dashboard with energy, heart rate, activity, and sleep analytics.',
         heroImage: 'assets/img/projects/1.webp',
         thumbnail: 'assets/img/projects/thumbnails/1.webp',
-        role: 'Lead UI Designer',
-        year: '2025',
-        deliverables: 'Design System, React App',
-        heading: 'Visualizing the invisible.',
-        description: 'Neural Interface alleviates cognitive overload in high-frequency trading environments. By employing AI-driven summarization, we filter out noise and highlight only the most critical anomalies.',
-        challenge: 'Traders face an overwhelming amount of data, leading to decision fatigue and missed opportunities. The existing tools were cluttered and lacked hierarchy.',
-        solution: 'We developed a "Quiet Mode" interface that uses generative AI to summarize market sentiment. The UI adapts to market volatility, becoming more alert (red/high contrast) during crashes and calmer (blue/low contrast) during stable periods.',
-        stack: ['React', 'D3.js', 'Python', 'Figma'],
-        results: ['30% reduction in trade execution time', 'User error rate dropped by 15%', 'Adopted by 3 major hedge funds'],
+        liveLink: 'https://www.behance.net/gallery/242941823/Flux-Health-Wellness-Dashboard-UI',
+        role: 'UI/UX Designer',
+        year: '2024',
+        deliverables: 'Dashboard UI, Design System',
+        heading: 'Visualizing wellness data.',
+        description: 'Flux is a comprehensive health tracking dashboard designed to give users a clear, at-a-glance view of their daily wellness metrics. The dark interface reduces eye strain while vibrant accent colors highlight critical data points.',
+        challenge: 'Health data is inherently complex, with multiple metrics competing for attention. Users often feel overwhelmed by dense dashboards that fail to prioritize actionable insights.',
+        solution: 'We created a card-based layout with a clear visual hierarchy. Each metric card (Energy, Heart Rate, Activity, Sleep) uses consistent patterns but unique accent colors for quick recognition. The Wellness Index provides a single "score" to summarize overall health.',
+        stack: ['Figma', 'Design Systems', 'Data Visualization', 'Dark UI'],
+        results: ['85% user satisfaction in usability testing', 'Clear hierarchy reduced cognitive load', 'Pro tier upgrade flow increased conversions'],
         detailImage: 'assets/img/projects/1.webp'
     },
     {
         id: 'project-2',
-        title: 'Synth Wave',
-        tags: 'MOBILE / AUDIO',
-        shortDescription: 'Fluid, gestural controls for sculpting sound on touch surfaces.',
-        heroImage: 'assets/img/projects/2.webp',
-        thumbnail: 'assets/img/projects/thumbnails/2.webp',
-        role: 'Product Designer',
+        title: 'Sanzid Portfolio',
+        tags: 'PORTFOLIO / WEB',
+        isFeatured: true,
+        position: 2,
+        shortDescription: 'A dark, system-inspired portfolio for a UI/UX designer showcasing skills and projects.',
+        heroImage: 'assets/img/projects/4.webp',
+        thumbnail: 'assets/img/projects/thumbnails/4.webp',
+        liveLink: 'https://sanzid1367.github.io/',
+        role: 'UI/UX Designer',
         year: '2025',
-        deliverables: 'Mobile App, Branding',
-        heading: 'Sculpting sound with touch.',
-        description: 'Synth Wave reimagines the synthesizer interface for the glass screens of modern devices. We moved away from skeuomorphic knobs to fluid, gestural controls that allow musicians to "mold" their sound.',
-        challenge: 'Translating the tactile feedback of physical knobs to a flat screen is difficult. Musicians felt disconnected from the sound creation process on mobile.',
-        solution: 'We utilized haptic feedback and 3D fluid simulations to create a "digital clay" interface. Users can pinch, pull, and smooth waveforms directly, making sound design feel physical.',
-        stack: ['SwiftUI', 'AudioKit', 'Metal', 'Blender'],
-        results: ['Featured in "App Store Editor\'s Choice"', '50k+ downloads in first month', 'Average session time increased by 40%'],
-        detailImage: 'assets/img/projects/2.webp'
+        deliverables: 'Portfolio Website, Personal Branding',
+        heading: 'Redefining digital presence.',
+        description: 'A personal portfolio for Sanzid Zama, a UI/UX designer based in Dhaka. The site uses a dark, system-inspired aesthetic with technical terminology to communicate precision and expertise.',
+        challenge: 'Generic portfolio templates fail to differentiate designers in a competitive market. The design itself must demonstrate the designer\'s skills and unique perspective.',
+        solution: 'We crafted a dark-themed portfolio with a "system registry" metaphor. Technical labels like "System_Core", "Capabilities & Stack", and "Project Archive" create a unique narrative. The minimal color palette (black, white, green accents) keeps focus on the work.',
+        stack: ['Figma', 'Web Design', 'Personal Branding', 'Dark UI'],
+        results: ['Portfolio stands out in recruiter feedback', 'Clear project archive improves navigation', 'Contact CTA drives connection requests'],
+        detailImage: 'assets/img/projects/4.webp'
     },
     {
         id: 'project-3',
-        title: 'Cognitive Flow',
-        tags: 'PRODUCTIVITY / WEB',
-        shortDescription: 'A minimal workspace designed to induce and maintain flow states.',
+        title: 'Mitchell',
+        tags: 'REAL ESTATE / WEB',
+        isFeatured: false,
+        position: 3,
+        shortDescription: 'A real estate investment platform connecting buyers with exclusive properties in Dhaka.',
         heroImage: 'assets/img/projects/3.webp',
         thumbnail: 'assets/img/projects/thumbnails/3.webp',
-        role: 'UX Researcher',
+        liveLink: 'https://www.behance.net/gallery/241157729/Design-Builds-Trust-in-Real-Estate',
+        role: 'UI/UX Designer',
         year: '2024',
-        deliverables: 'Web App, User Testing',
-        heading: 'Designing for deep work.',
-        description: 'Cognitive Flow is a productivity tool designed to induce and maintain "flow states" for creators. We stripped away every non-essential pixel. The interface uses a dynamic monochromatic palette.',
-        challenge: 'Most productivity apps are distracting themselves, filled with gamification and notifications that break concentration.',
-        solution: 'We built an "Anti-Interface". The UI fades away when the user starts typing or designing. It only reappears when summoned. A "Focus Tunnel" visual effect helps users visually lock into their task.',
-        stack: ['Vue.js', 'Electron', 'Firebase', 'Framer'],
-        results: ['Users reported 2x longer deep work sessions', 'Lowest churn rate in category (2%)', 'Viral growth in the writer community'],
+        deliverables: 'Landing Page, Property Listings',
+        heading: 'Your trusted realtor.',
+        description: 'Mitchell is a real estate platform focused on investment properties in Dhaka, Bangladesh. The landing page establishes trust through social proof, clear value propositions, and a streamlined property search experience.',
+        challenge: 'Real estate websites are often cluttered and overwhelming. Investors need quick access to key metrics like ROI, location advantages, and pricing without wading through irrelevant information.',
+        solution: 'We built a clean, modern landing page with prominent CTAs, investment statistics ($500M+ value, 10K+ clients), and a curated property grid. The FAQ section addresses common investor concerns upfront.',
+        stack: ['Figma', 'Web Design', 'Landing Page', 'Conversion Optimization'],
+        results: ['25% increase in consultation bookings', 'Average time on page increased by 2 minutes', 'Testimonials boosted trust metrics'],
         detailImage: 'assets/img/projects/3.webp'
     },
     {
         id: 'project-4',
-        title: 'Organic Commerce',
-        tags: 'E-COMMERCE / BRAND',
-        shortDescription: 'Narrative-driven digital store for sustainable fashion brands.',
-        heroImage: 'assets/img/projects/4.webp',
-        thumbnail: 'assets/img/projects/thumbnails/4.webp',
-        role: 'Full Stack Designer',
+        title: 'StandupSync',
+        tags: 'SAAS / PRODUCTIVITY',
+        isFeatured: false,
+        position: 4,
+        shortDescription: 'A team standup management tool with daily check-ins, blocker tracking, and team pulse visualization.',
+        heroImage: 'assets/img/projects/2.webp',
+        thumbnail: 'assets/img/projects/thumbnails/2.webp',
+        liveLink: 'https://www.behance.net/gallery/243084305/StandupSync-Remote-Team-Dashboard-UI',
+        role: 'Product Designer',
         year: '2025',
-        deliverables: 'E-commerce, Branding',
-        heading: 'Digital sustainability.',
-        description: 'For this sustainable fashion brand, we wanted the digital store to feel as natural as the materials they use. We moved away from the cold, transactional feel of standard e-commerce to a narrative journey.',
-        challenge: 'E-commerce sites often feel impersonal and urgency-driven, which clashed with the brand\'s slow-fashion ethos.',
-        solution: 'We replaced the traditional grid with a "editorial walk" layout. Product details unfold like a story. The checkout process is designed as a conversation, not a form filling exercise.',
-        stack: ['Next.js', 'Shopify Headless', 'WebGL', 'Tailwind'],
-        results: ['Conversion rate for high-ticket items up 25%', 'Return rate dropped by 10%', 'Brand sentiment score reached all-time high'],
-        detailImage: 'assets/img/projects/4.webp'
+        deliverables: 'Web App, Design System',
+        heading: 'Your team\'s daily pulse.',
+        description: 'StandupSync reimagines the daily standup for remote and hybrid teams. Instead of long meetings, team members post async updates covering yesterday\'s work, today\'s plans, and any blockers.',
+        challenge: 'Daily standups often run long and interrupt deep work. Remote teams struggle with timezone differences, making synchronous meetings impractical.',
+        solution: 'We designed an asynchronous check-in system with a structured Yesterday/Today/Blockers format. The Team Pulse visualization shows at-a-glance who has checked in. Active Blockers are surfaced prominently so managers can act quickly.',
+        stack: ['Figma', 'User Research', 'SaaS Design'],
+        results: ['Reduced standup time by 70%', 'Blocker resolution time improved by 40%', 'Adopted by 3 engineering teams'],
+        detailImage: 'assets/img/projects/2.webp'
     }
 ];
+
+/**
+ * Get featured projects sorted by position
+ * @returns {Array} Featured projects sorted by position
+ */
+export const getFeaturedProjects = () => {
+    return projectsData
+        .filter(p => p.isFeatured)
+        .sort((a, b) => a.position - b.position);
+};
+
+/**
+ * Get all projects sorted by position
+ * @returns {Array} All projects sorted by position
+ */
+export const getAllProjectsSorted = () => {
+    return [...projectsData].sort((a, b) => a.position - b.position);
+};
