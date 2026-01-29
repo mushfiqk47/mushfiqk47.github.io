@@ -9,6 +9,7 @@
 export const projectsData = [
     {
         id: 'project-1',
+        slug: 'flux',
         title: 'Flux',
         tags: 'HEALTH / DASHBOARD',
         isFeatured: true,
@@ -30,6 +31,7 @@ export const projectsData = [
     },
     {
         id: 'project-2',
+        slug: 'sanzid-portfolio',
         title: 'Sanzid Portfolio',
         tags: 'PORTFOLIO / WEB',
         isFeatured: true,
@@ -51,6 +53,7 @@ export const projectsData = [
     },
     {
         id: 'project-3',
+        slug: 'mitchell',
         title: 'Mitchell',
         tags: 'REAL ESTATE / WEB',
         isFeatured: false,
@@ -72,6 +75,7 @@ export const projectsData = [
     },
     {
         id: 'project-4',
+        slug: 'standupsync',
         title: 'StandupSync',
         tags: 'SAAS / PRODUCTIVITY',
         isFeatured: false,
@@ -109,4 +113,13 @@ export const getFeaturedProjects = () => {
  */
 export const getAllProjectsSorted = () => {
     return [...projectsData].sort((a, b) => a.position - b.position);
+};
+
+/**
+ * Get a project by its URL slug
+ * @param {string} slug - The project slug (e.g., 'flux', 'sanzid-portfolio')
+ * @returns {Object|undefined} The project object or undefined
+ */
+export const getProjectBySlug = (slug) => {
+    return projectsData.find(p => p.slug === slug.toLowerCase());
 };

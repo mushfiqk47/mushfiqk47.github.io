@@ -8,7 +8,7 @@ import { projectsData } from './data.js';
  * @returns {string} HTML string.
  */
 export const renderProjectCard = (project, index, isFeatured) => `
-    <a href="#${project.id}" class="project-card reveal" aria-label="View project: ${project.title}">
+    <a href="/${project.slug}" class="project-card reveal" aria-label="View project: ${project.title}">
         <div class="card-image-wrapper">
             <img src="${project.thumbnail}" alt="" loading="lazy" class="project-thumb">
             <div class="card-overlay">
@@ -30,14 +30,14 @@ export const renderProjectCard = (project, index, isFeatured) => `
 
 /**
  * Renders the full detail view for a specific project.
- * @param {string} projectId - The ID of the project to render.
+ * @param {string} projectSlug - The slug of the project to render.
  * @returns {string} HTML string.
  */
-export const renderDetailView = (projectId) => {
-    const project = projectsData.find(p => p.id === projectId);
+export const renderDetailView = (projectSlug) => {
+    const project = projectsData.find(p => p.slug === projectSlug);
     if (!project) return '';
 
-    const idx = projectsData.findIndex(p => p.id === projectId);
+    const idx = projectsData.findIndex(p => p.slug === projectSlug);
     const prev = projectsData[idx - 1] || projectsData[projectsData.length - 1];
     const next = projectsData[idx + 1] || projectsData[0];
 
@@ -46,7 +46,7 @@ export const renderDetailView = (projectId) => {
             <div class="sticky-cta-bar">
                 <div class="container">
                     <a href="${project.liveLink}" target="_blank" rel="noopener" class="btn-live">View Live ↗</a>
-                    <a href="#contact" class="btn-live btn-secondary">Hire Me</a>
+                    <a href="/contact" class="btn-live btn-secondary">Hire Me</a>
                 </div>
             </div>
             <div class="container">
@@ -106,8 +106,8 @@ export const renderDetailView = (projectId) => {
                     </div>
                     
                     <nav class="project-nav" aria-label="Project Navigation">
-                        <a href="#${prev.id}" class="nav-link prev" aria-label="Previous project: ${prev.title}">← ${prev.title}</a>
-                        <a href="#${next.id}" class="nav-link next" aria-label="Next project: ${next.title}">${next.title} →</a>
+                        <a href="/${prev.slug}" class="nav-link prev" aria-label="Previous project: ${prev.title}">← ${prev.title}</a>
+                        <a href="/${next.slug}" class="nav-link next" aria-label="Next project: ${next.title}">${next.title} →</a>
                     </nav>
                 </article>
                 </div>
