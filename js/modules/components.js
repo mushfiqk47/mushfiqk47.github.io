@@ -42,33 +42,45 @@ export const renderDetailView = (projectId) => {
     const next = projectsData[idx + 1] || projectsData[0];
 
     return `
-        <div class="project-hero">
-            <img src="${project.heroImage}" alt="Hero image for ${project.title}" class="hero-img">
-        </div>
         <section class="project-content">
+            <div class="sticky-cta-bar">
+                <div class="container">
+                    <a href="${project.liveLink}" target="_blank" rel="noopener" class="btn-live">View Live ↗</a>
+                    <a href="#contact" class="btn-live btn-secondary">Hire Me</a>
+                </div>
+            </div>
             <div class="container">
                 <div class="detail-grid">
                 <aside class="sticky-sidebar">
-                    <h1 class="hero-title">${project.title}</h1>
-                    <dl class="project-meta">
-                        <dt class="meta-label">ROLE</dt> <dd>${project.role}</dd>
-                        <dt class="meta-label">YEAR</dt> <dd>${project.year}</dd>
-                        <dt class="meta-label">DELIVERABLES</dt> <dd>${project.deliverables}</dd>
-                    </dl>
-                    <div class="tech-stack-section">
-                        <span class="meta-label">SKILL STACK</span>
-                        <div class="skills-tag-cloud">
-                            ${project.stack.map(t => `<span class="skill-tag">${t}</span>`).join('')}
+                    <div class="project-header-row">
+                        <h1 class="project-title">${project.title}</h1>
+                        <div class="project-meta-inline">
+                            <div class="meta-item">
+                                <span class="meta-label-inline">Role</span>
+                                <span class="meta-value">${project.role}</span>
+                            </div>
+                            <div class="meta-divider"></div>
+                            <div class="meta-item">
+                                <span class="meta-label-inline">Year</span>
+                                <span class="meta-value">${project.year}</span>
+                            </div>
+                            <div class="meta-divider"></div>
+                            <div class="meta-item">
+                                <span class="meta-label-inline">Deliverables</span>
+                                <span class="meta-value">${project.deliverables}</span>
+                            </div>
+                            <div class="meta-divider"></div>
+                            <div class="skills-inline">
+                                ${project.stack.map(t => `<span class="skill-chip">${t}</span>`).join('')}
+                            </div>
                         </div>
-                    </div>
-                    <div class="cta-wrapper">
-                        <a href="${project.liveLink}" target="_blank" rel="noopener" class="btn-live">Live Link  ↗</a>
-                        <a href="#contact" class="btn-live btn-secondary">Work with me</a>
                     </div>
                 </aside>
                 <article>
-                    <span class="meta-label">Overview</span>
-                    <h2 class="display-title">${project.heading}</h2>
+                    <div class="overview-header">
+                        <span class="meta-label">Overview</span>
+                        <h2 class="display-title">${project.heading}</h2>
+                    </div>
                     <p class="lead-text">${project.description}</p>
                     
                     <div class="case-study-grid">
