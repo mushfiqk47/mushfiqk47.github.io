@@ -6,14 +6,9 @@
     <title>Redirecting...</title>
     <script>
         // GitHub Pages SPA redirect script
-        // Redirects 404 to index.html with the path as a query parameter
-        const path = window.location.pathname;
-        const query = window.location.search;
-        const hash = window.location.hash;
-        // Redirect to index with path encoded in query
-        window.location.replace(
-            window.location.origin + '/?p=' + encodeURIComponent(path + query + hash)
-        );
+        // Store the target path in sessionStorage and redirect to index
+        sessionStorage.redirect = window.location.href;
+        window.location.replace(window.location.origin + '/');
     </script>
 </head>
 
@@ -22,5 +17,3 @@
 </body>
 
 </html>
-</CodeContent>
-<parameter name="EmptyFile">false

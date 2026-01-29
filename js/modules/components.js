@@ -1,4 +1,4 @@
-import { projectsData } from './data.js';
+import { projectsData, getProjectBySlug } from './data.js';
 
 /**
  * Renders the HTML string for a project card.
@@ -34,7 +34,7 @@ export const renderProjectCard = (project, index, isFeatured) => `
  * @returns {string} HTML string.
  */
 export const renderDetailView = (projectSlug) => {
-    const project = projectsData.find(p => p.slug === projectSlug);
+    const project = getProjectBySlug(projectSlug);
     if (!project) return '';
 
     const idx = projectsData.findIndex(p => p.slug === projectSlug);

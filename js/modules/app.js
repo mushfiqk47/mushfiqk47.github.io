@@ -24,7 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initRouter();
     initUI();
     initContact();
-
-    // Log init for debug (remove in production if strict)
-    console.log('System Initialized: MUSHFIQ KABIR Digital Portfolio');
 });

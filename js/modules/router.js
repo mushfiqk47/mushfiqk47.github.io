@@ -12,16 +12,7 @@ export const initRouter = () => {
 
     // Get the current path from URL
     const getPath = () => {
-        let path = window.location.pathname;
-        // Handle GitHub Pages redirect from 404.html
-        const params = new URLSearchParams(window.location.search);
-        const redirectedPath = params.get('p');
-        if (redirectedPath) {
-            // Clean up the URL and use the redirected path
-            path = decodeURIComponent(redirectedPath);
-            window.history.replaceState(null, '', path);
-        }
-        // Remove trailing slash and leading slash for consistency
+        const path = window.location.pathname;
         return path.replace(/^\/|\/$/g, '') || 'home';
     };
 
